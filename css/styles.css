@@ -4,6 +4,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 body {
@@ -81,12 +82,7 @@ body {
         }
         @media (min-width: 600px) {
             ul {
-                list-style: none;
-                text-align: center;
-                display: flex;
                 flex-direction: row;
-                align-items: center;
-
                 li {
                     border: none;
                 }
@@ -221,7 +217,6 @@ body {
     }
 
     @media (min-width: 600px) and (max-width: 767px) {
-
         #biography-section {
             bio-intro {
                 display: flex;
@@ -248,7 +243,6 @@ body {
         }
 
         #home-section {
-            display: flex;
             flex-direction: row;
             gap: 1rem;
             justify-content: center;
@@ -311,21 +305,13 @@ body {
     }
 
     @media (min-width: 768px) and (max-width: 1024px) {
-        background-color: var(--secondaryBg);
+        background-color: var(--lightBg);
         #biography-section {
             #bio-intro {
-                display: flex;
                 flex-direction: row;
                 align-items: right;
-                padding: 0.8rem;
                 align-items: flex-start;
 
-                p {
-                    font-family: var(--secondaryFont);
-                    color: var(--textDark);
-                    font-weight: normal;
-                    padding: 0.5rem 0;
-                }
                 #book-display-left {
                     display: block;
                     padding: 0.5rem;
@@ -344,27 +330,6 @@ body {
 
             #career-overview {
                 #reviews-container {
-                    #quote-block {
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        background-color: var(--menuBg);
-                        border-radius: 1rem;
-
-                        p {
-                            font-family: var(--secondaryFont);
-                            color: var(--textLight);
-                            font-weight: normal;
-                            padding: 0.5rem 0;
-                            text-align: center;
-                            width: 70%;
-
-                            &:nth-child(2) {
-                                display: flex;
-                                justify-content: end;
-                            }
-                        }
-                    }
 
                     #career-highlights {
                         display: flex;
@@ -401,65 +366,9 @@ body {
             }
         }
 
-        #home-section {
-            display: flex;
-            flex-direction: row;
-            gap: 1rem;
-            justify-content: center;
-            height: 15rem;
-            align-items: center;
-
-            .hero-content {
-                width: 85%;
-            }
-            .hero-image {
-                padding-right: 1rem;
-            }
-
-            img {
-                width: 100%;
-                margin: 0 auto;
-                border-radius: 1rem;
-                padding: 1rem 0;
-            }
-        }
-
-        .author-profile-wrapper {
-            display: flex;
-            justify-content: space-between;
-            align-items: left;
-            flex-direction: row;
-            flex: auto;
-            padding: 0 1rem;
-
-            .profile-box {
-                padding: 0.5rem 0;
-                text-align: left;
-
-                &:first-child {
-                    display: block;
-                }
-            }
-        }
-
         header {
-            img {
-                border-radius: 100%;
-                width: 60%;
-                display: flex;
-                align-items: center;
-            }
-
             .portrait-wrapper {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-evenly;
                 gap: 2rem;
-            }
-
-            #language-selector {
-                padding-bottom: 1rem;
             }
         }
     }
@@ -467,7 +376,7 @@ body {
     @media (min-width: 1024px) {
         margin: 0 5rem;
 
-        background-color: var(--secondaryBg);
+        background-color: var(--lightBg);
         #biography-section {
             #career-overview {
                 font-family: var(--secondaryFont);
@@ -563,7 +472,6 @@ body {
         }
 
         #home-section {
-            display: flex;
             flex-direction: row;
             gap: 1rem;
             justify-content: center;
@@ -604,29 +512,12 @@ body {
         }
 
         header {
-            img {
-                border-radius: 100%;
-                width: 60%;
-                display: flex;
-                align-items: center;
-            }
-
             .portrait-wrapper {
-                display: flex;
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-evenly;
                 gap: 10rem;
-            }
-
-            #language-selector {
-                padding-bottom: 1rem;
             }
         }
     }
 }
-
-
 
 #tour-section {
     #tour-schedule {
@@ -791,10 +682,8 @@ body {
     }
 }
 
-
-
 #contact-section {
-    background-color: var(--secondaryBg);
+    background-color: var(--lightBg);
 
     #primary-contact {
         #contact-wrapper {
@@ -833,8 +722,7 @@ body {
                 }
             }
             a {
-                text-decoration: none;
-                color: var(--linkColor);
+                color: var(--primaryBg);
                 padding: 0.4rem 0;
             }
         }
@@ -873,8 +761,7 @@ body {
                 padding: 0.5rem 0;
             }
             a {
-                text-decoration: none;
-                color: var(--linkColor);
+                color: var(--primaryBg);
                 padding: 0.4rem 0;
             }
         }
@@ -909,7 +796,7 @@ body {
                 border: 1px solid var(--primaryBg);
             }
             button {
-                background-color: var(--secondaryBg);
+                background-color: var(--lightBg);
                 color: var(--textDark);
                 border: 1px solid var(--primaryBg);
                 border-radius: 0.5rem;
@@ -1033,4 +920,4 @@ body {
             flex-direction: column;
         }
     }
-}
+} 
