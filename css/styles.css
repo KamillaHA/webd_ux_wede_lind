@@ -1,0 +1,1036 @@
+@import "variables.css";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    .author-profile-wrapper {
+        display: flex;
+        justify-content: space-around;
+        align-items: left;
+        flex-direction: column;
+
+        .profile-box {
+            padding: 0.5rem 0;
+            text-align: left;
+
+            &:first-child {
+                display: none;
+            }
+        }
+    }
+
+    background-color: var(--lightBg);
+
+    header {
+        background-color: var(--primaryBg);
+        color: var(--accentColor);
+        padding: 10px;
+        display: flex;
+        justify-content: center;
+
+        h1,
+        p {
+            font-family: var(--primaryFont);
+            font-weight: bold;
+        }
+
+        #site-language {
+            padding: 5px;
+            border-radius: 5px;
+            border: 1px solid var(--secondaryAccent);
+            margin: 1rem 0;
+
+            option {
+                padding: 5px;
+            }
+        }
+    }
+
+    nav {
+        background-color: var(--menuBg);
+        padding: 0.2rem 0;
+
+        ul {
+            list-style: none;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            li {
+                width: 100%;
+                padding: 0.5rem 0;
+                text-align: center;
+                border-bottom: 2px var(--accentColor) solid;
+
+                &:last-child {
+                    border-bottom: none;
+                }
+
+                a {
+                    font-size: var(--menuFontSize);
+                    font-family: var(--secondaryFont);
+                    text-decoration: none;
+                    color: var(--lightBg);
+                }
+            }
+        }
+        @media (min-width: 600px) {
+            ul {
+                list-style: none;
+                text-align: center;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                li {
+                    border: none;
+                }
+            }
+        }
+    }
+
+    #biography-section {
+        #career-overview {
+            font-family: var(--secondaryFont);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0 0.8rem;
+            padding-bottom: 1rem;
+
+            div {
+                margin: 0 1rem;
+            }
+
+            #showcase-left,
+            #showcase-right {
+                display: none;
+            }
+
+            #quote-block {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: var(--menuBg);
+                border-radius: 1rem;
+
+                p {
+                    font-family: var(--secondaryFont);
+                    color: var(--textLight);
+                    font-weight: normal;
+                    padding: 0.5rem 0;
+                    text-align: center;
+                    width: 70%;
+
+                    &:nth-child(2) {
+                        display: flex;
+                        justify-content: end;
+                    }
+                }
+            }
+
+            #career-highlights {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                border-radius: 1rem;
+
+                p {
+                    font-family: var(--secondaryFont);
+                    color: var(--textDark);
+                    font-weight: normal;
+                    padding: 1rem 0;
+                    text-align: start;
+                }
+            }
+        }
+
+        #bio-intro {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 0.8rem;
+
+            div {
+                padding: 0 1rem;
+            }
+            p {
+                font-family: var(--secondaryFont);
+                color: var(--textDark);
+                font-weight: normal;
+                padding: 0.5rem 0;
+            }
+            #book-display-left,
+            #book-display-right {
+                display: none;
+            }
+        }
+    }
+
+    #home-section {
+        background-color: var(--accentColor);
+        display: flex;
+        flex-direction: column;
+
+        #promo-badge {
+            padding-top: 10px;
+
+            button {
+                background-color: var(--secondaryAccent);
+                color: var(--lightBg);
+                padding: 0.8rem 3rem;
+                display: block;
+                margin: 0 auto;
+                border: none;
+                border-radius: 0.5rem;
+                font-family: var(--secondaryFont);
+                font-size: var(--menuFontSize);
+            }
+        }
+
+        h2 {
+            color: var(--textDark);
+            font-family: var(--secondaryFont);
+            margin: 0.5rem 0;
+            font-style: italic;
+            padding: 0.2rem;
+            font-weight: 500;
+            text-align: center;
+            border-radius: 0.5rem;
+        }
+
+        p {
+            font-family: var(--secondaryFont);
+            color: var(--textDark);
+            text-align: center;
+            font-weight: normal;
+            padding: 0.5rem 0;
+        }
+        img {
+            width: 50%;
+            display: block;
+            margin: 0 auto;
+            border-radius: 1rem;
+            padding: 1rem 0;
+        }
+    }
+
+    @media (min-width: 600px) and (max-width: 767px) {
+
+        #biography-section {
+            bio-intro {
+                display: flex;
+                flex-direction: row;
+                align-items: right;
+                padding: 0.8rem;
+                align-items: flex-start;
+
+                div {
+                    padding: 0 1rem;
+                }
+
+                p {
+                    font-family: var(--secondaryFont);
+                    color: var(--textDark);
+                    font-weight: normal;
+                    padding: 0.5rem 0;
+                }
+                #book-display-left,
+                #book-display-right {
+                    display: none;
+                }
+            }
+        }
+
+        #home-section {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            justify-content: center;
+            height: 15rem;
+            align-items: center;
+
+            .hero-content {
+                width: 85%;
+            }
+            .hero-image {
+                padding-right: 1rem;
+            }
+
+            img {
+                width: 100%;
+                margin: 0 auto;
+                border-radius: 1rem;
+                padding: 1rem 0;
+            }
+        }
+
+        .author-profile-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: left;
+            flex-direction: row;
+            flex: auto;
+            padding: 0 1rem;
+
+            .profile-box {
+                padding: 0.5rem 0;
+                text-align: left;
+
+                &:first-child {
+                    display: block;
+                }
+            }
+        }
+
+        header {
+            img {
+                border-radius: 100%;
+                width: 60%;
+                display: flex;
+                align-items: center;
+            }
+
+            .portrait-wrapper {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-evenly;
+                gap: 1rem;
+            }
+
+            #language-selector {
+                padding-bottom: 1rem;
+            }
+        }
+    }
+
+    @media (min-width: 768px) and (max-width: 1024px) {
+        background-color: var(--secondaryBg);
+        #biography-section {
+            #bio-intro {
+                display: flex;
+                flex-direction: row;
+                align-items: right;
+                padding: 0.8rem;
+                align-items: flex-start;
+
+                p {
+                    font-family: var(--secondaryFont);
+                    color: var(--textDark);
+                    font-weight: normal;
+                    padding: 0.5rem 0;
+                }
+                #book-display-left {
+                    display: block;
+                    padding: 0.5rem;
+
+                    figcaption {
+                        text-align: center;
+                        font-family: var(--secondaryFont);
+                        padding-top: 0.5rem;
+                    }
+                }
+
+                #book-display-right {
+                    display: none;
+                }
+            }
+
+            #career-overview {
+                #reviews-container {
+                    #quote-block {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        background-color: var(--menuBg);
+                        border-radius: 1rem;
+
+                        p {
+                            font-family: var(--secondaryFont);
+                            color: var(--textLight);
+                            font-weight: normal;
+                            padding: 0.5rem 0;
+                            text-align: center;
+                            width: 70%;
+
+                            &:nth-child(2) {
+                                display: flex;
+                                justify-content: end;
+                            }
+                        }
+                    }
+
+                    #career-highlights {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: start;
+                        border-radius: 1rem;
+
+                        p {
+                            font-family: var(--secondaryFont);
+                            color: var(--textDark);
+                            font-weight: normal;
+                            padding: 1rem 0;
+                            text-align: start;
+                        }
+                    }
+                }
+
+                display: flex;
+                flex-direction: row;
+                align-items: right;
+                padding: 0.8rem;
+                align-items: flex-start;
+
+                #showcase-left {
+                    display: block;
+                    background-color: unset;
+
+                    figcaption {
+                        text-align: center;
+                        font-family: var(--secondaryFont);
+                        padding-top: 0.5rem;
+                    }
+                }
+            }
+        }
+
+        #home-section {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            justify-content: center;
+            height: 15rem;
+            align-items: center;
+
+            .hero-content {
+                width: 85%;
+            }
+            .hero-image {
+                padding-right: 1rem;
+            }
+
+            img {
+                width: 100%;
+                margin: 0 auto;
+                border-radius: 1rem;
+                padding: 1rem 0;
+            }
+        }
+
+        .author-profile-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: left;
+            flex-direction: row;
+            flex: auto;
+            padding: 0 1rem;
+
+            .profile-box {
+                padding: 0.5rem 0;
+                text-align: left;
+
+                &:first-child {
+                    display: block;
+                }
+            }
+        }
+
+        header {
+            img {
+                border-radius: 100%;
+                width: 60%;
+                display: flex;
+                align-items: center;
+            }
+
+            .portrait-wrapper {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-evenly;
+                gap: 2rem;
+            }
+
+            #language-selector {
+                padding-bottom: 1rem;
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        margin: 0 5rem;
+
+        background-color: var(--secondaryBg);
+        #biography-section {
+            #career-overview {
+                font-family: var(--secondaryFont);
+                display: flex;
+                flex-direction: row;
+                align-items: start;
+                padding: 0 0.8rem;
+                padding-bottom: 1rem;
+
+                div {
+                    margin: 0 1rem;
+                }
+
+                #showcase-left,
+                #showcase-right {
+                    display: block;
+                    background-color: unset;
+                    margin: 0 0.5rem;
+
+                    figcaption {
+                        text-align: center;
+                        font-family: var(--secondaryFont);
+                        padding-top: 0.5rem;
+                    }
+                }
+
+                #quote-block {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    background-color: var(--menuBg);
+                    border-radius: 1rem;
+
+                    p {
+                        font-family: var(--secondaryFont);
+                        color: var(--textLight);
+                        font-weight: normal;
+                        padding: 0.5rem 0;
+                        text-align: center;
+                        width: 70%;
+
+                        &:nth-child(2) {
+                            display: flex;
+                            justify-content: end;
+                        }
+                    }
+                }
+
+                #career-highlights {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    border-radius: 1rem;
+
+                    p {
+                        font-family: var(--secondaryFont);
+                        color: var(--textDark);
+                        font-weight: normal;
+                        padding: 1rem 0;
+                        text-align: start;
+                    }
+                }
+            }
+
+            #bio-intro {
+                display: flex;
+                flex-direction: row;
+                align-items: right;
+                padding: 0.8rem;
+                align-items: flex-start;
+                div {
+                    padding: 0 1rem;
+                }
+
+                p {
+                    font-family: var(--secondaryFont);
+                    color: var(--textDark);
+                    font-weight: normal;
+                    padding: 0.5rem 0;
+                }
+                #book-display-left,
+                #book-display-right {
+                    display: block;
+                    padding: 0.5rem;
+
+                    figcaption {
+                        text-align: center;
+                        font-family: var(--secondaryFont);
+                        padding-top: 0.5rem;
+                    }
+                }
+            }
+        }
+
+        #home-section {
+            display: flex;
+            flex-direction: row;
+            gap: 1rem;
+            justify-content: center;
+            height: 15rem;
+            align-items: center;
+
+            .hero-content {
+                width: 85%;
+            }
+            .hero-image {
+                padding-right: 1rem;
+            }
+
+            img {
+                width: 100%;
+                margin: 0 auto;
+                border-radius: 1rem;
+                padding: 1rem 0;
+            }
+        }
+
+        .author-profile-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: left;
+            flex-direction: row;
+            flex: auto;
+            padding: 0 1rem;
+
+            .profile-box {
+                padding: 0.5rem 0;
+                text-align: left;
+
+                &:first-child {
+                    display: block;
+                }
+            }
+        }
+
+        header {
+            img {
+                border-radius: 100%;
+                width: 60%;
+                display: flex;
+                align-items: center;
+            }
+
+            .portrait-wrapper {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-evenly;
+                gap: 10rem;
+            }
+
+            #language-selector {
+                padding-bottom: 1rem;
+            }
+        }
+    }
+}
+
+
+
+#tour-section {
+    #tour-schedule {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding-top: 1rem;
+    }
+
+    @media (min-width: 1024px) {
+        #tour-schedule {
+            grid-template-columns: 1fr 1fr;
+
+            p {
+                border-bottom: unset;
+            }
+        }
+
+        .event-card {
+            border-bottom: unset;
+            border: 1px solid var(--accentColor);
+        }
+
+        #author-portrait {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            padding: 0!important;
+        }
+    }
+
+    font-family: var(--primaryFont);
+    h2 {
+        color: var(--accentColor);
+        background-color: var(--menuBg);
+        padding: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    #author-portrait {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        padding: 0.5rem;
+    }
+
+    .event-card {
+        font-family: var(--secondaryFont);
+        img {
+            width: 30px;
+        }
+
+        .event-header {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            align-items: flex-start;
+            padding-top: 1rem;
+        }
+
+        h4 {
+            color: var(--primaryBg);
+            margin: 0 0 0.3rem 1rem;
+        }
+
+        h5 {
+            color: var(--secondaryAccent);
+            margin: 0 0 0.3rem 1rem;
+        }
+
+        p {
+            color: var(--textDark);
+            margin: 0 0 0.3rem 1rem;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--accentColor);
+        }
+    }
+}
+
+.section-heading {
+    color: var(--accentColor);
+    background-color: var(--menuBg);
+    padding: 0.5rem;
+    margin: 1rem 0;
+}
+
+#publications-section {
+    .book-entry {
+        #book-cover {
+            display: flex;
+            justify-content: center;
+            padding-bottom: 1rem;
+        }
+        #book-details {
+            div {
+                padding-left: 1rem;
+                margin-bottom: 1rem;
+                h1,
+                span {
+                    font-family: var(--secondaryFont);
+                }
+            }
+            p {
+                padding: 0 1rem;
+                font-family: var(--secondaryFont);
+                padding-bottom: 10px;
+                border-bottom: 1px solid var(--accentColor);
+            }
+        }
+    }
+
+    @media (min-width: 600px) and (max-width: 1024px) {
+        .book-entry {
+            display: flex;
+            flex-direction: row-reverse;
+            padding: 0 1rem;
+        }
+        #book-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 1rem;
+        }
+        #book-cover {
+            img {
+                object-fit: scale-down;
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        #books-gallery {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            p {
+                border-bottom: unset !important;
+            }
+        }
+
+        .book-entry {
+            display: flex;
+            flex-direction: row-reverse;
+            margin: 0.5rem;
+            border: 1px solid var(--accentColor);
+
+            img {
+                padding: 1rem;
+            }
+        }
+        #book-details {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            padding: 0.3rem 0;
+        }
+
+        #book-cover {
+            img {
+                object-fit: scale-down;
+            }
+        }
+    }
+}
+
+
+
+#contact-section {
+    background-color: var(--secondaryBg);
+
+    #primary-contact {
+        #contact-wrapper {
+            display: flex;
+            flex-direction: column;
+        }
+
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .portrait-frame {
+            display: flex;
+            justify-content: center;
+
+            img {
+                max-width: 9rem;
+                border-radius: 100%;
+            }
+        }
+
+        .contact-info {
+            font-family: var(--secondaryFont);
+            padding-left: 1rem;
+
+            h3 {
+                padding-bottom: 1rem;
+            }
+
+            p {
+                padding-bottom: 0.4rem;
+
+                &:last-child {
+                    border-bottom: 1px solid var(--accentColor);
+                    padding: 0.5rem 0;
+                }
+            }
+            a {
+                text-decoration: none;
+                color: var(--linkColor);
+                padding: 0.4rem 0;
+            }
+        }
+
+        h3 {
+            font-family: var(--secondaryFont);
+        }
+    }
+
+    #secondary-contact {
+        padding-top: 1rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+
+        .portrait-frame {
+            display: flex;
+            justify-content: center;
+
+            img {
+                max-width: 10rem;
+                border-radius: 100%;
+            }
+        }
+
+        .contact-info {
+            font-family: var(--secondaryFont);
+            padding-left: 1rem;
+
+            h3 {
+                padding-bottom: 1rem;
+            }
+
+            p {
+                padding-bottom: 0.4rem;
+                padding: 0.5rem 0;
+            }
+            a {
+                text-decoration: none;
+                color: var(--linkColor);
+                padding: 0.4rem 0;
+            }
+        }
+    }
+
+    #event-image {
+        display: none;
+        img {
+            display: none !important;
+        }
+    }
+
+    form {
+        font-family: var(--secondaryFont);
+        margin: 1rem;
+        fieldset {
+            border: 1px solid var(--primaryBg);
+            padding: 2rem;
+            border-radius: 0.5rem;
+
+            textarea {
+                margin-bottom: 0.5rem;
+                border-radius: 0.2rem;
+                width: 100%;
+                border: 1px solid var(--primaryBg);
+            }
+            input {
+                margin-bottom: 0.5rem;
+                border-radius: 0.2rem;
+                width: 100%;
+                padding: 10px;
+                border: 1px solid var(--primaryBg);
+            }
+            button {
+                background-color: var(--secondaryBg);
+                color: var(--textDark);
+                border: 1px solid var(--primaryBg);
+                border-radius: 0.5rem;
+                padding: 0.5rem;
+                cursor: pointer;
+            }
+        }
+    }
+}
+
+@media (min-width: 600px) {
+    #contact-section {
+        #primary-contact {
+            #contact-wrapper {
+                display: flex;
+                flex-direction: row;
+                padding-left: 1rem;
+                margin-top: 1rem;
+                border-bottom: 1px solid var(--accentColor);
+                padding: 0.5rem 0;
+                margin: 1rem;
+            }
+
+            p {
+                padding-bottom: 0.4rem;
+                &:last-child {
+                    border-bottom: none !important;
+                    padding: 0.5rem 0;
+                }
+            }
+
+            display: flex;
+            justify-content: left;
+            flex-direction: column;
+
+            .portrait-frame {
+                display: flex;
+                justify-content: left;
+
+                img {
+                    max-width: 9rem;
+                    border-radius: 100%;
+                }
+            }
+        }
+    }
+
+    #secondary-contact {
+        #contact-wrapper {
+            display: flex;
+            flex-direction: row;
+            padding-left: 1rem;
+            margin-top: 1rem;
+            border-bottom: 1px solid var(--accentColor);
+            padding: 0.5rem 0;
+            margin: 1rem;
+        }
+
+        padding-top: 1rem;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 1024px) {
+    #contact-section {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        #event-image {
+            display: flex;
+            justify-content: center;
+            img {
+                width: 90%;
+                height: 80%;
+                display: block !important;
+            }
+        }
+
+        #primary-contact {
+            #contact-wrapper {
+                display: flex;
+                flex-direction: row;
+                padding-left: 1rem;
+                margin-top: 1rem;
+                border-bottom: 1px solid var(--accentColor);
+                padding: 0.5rem 0;
+                margin: 1rem;
+            }
+
+            display: flex;
+            justify-content: left;
+            flex-direction: column;
+
+            .portrait-frame {
+                display: flex;
+                justify-content: left;
+
+                img {
+                    max-width: 9rem;
+                    border-radius: 100%;
+                }
+            }
+        }
+
+        #secondary-contact {
+            #contact-wrapper {
+                display: flex;
+                flex-direction: row;
+                padding-left: 1rem;
+                margin-top: 1rem;
+                border-bottom: 1px solid var(--accentColor);
+                padding: 0.5rem 0;
+                margin: 1rem;
+            }
+
+            padding-top: 1rem;
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+        }
+    }
+}
